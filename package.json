@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:ForQA": "playwright test --grep @ForQA",
+    "test:ForUAT": "playwright test --grep @ForUAT",
+    "test:ForPROD": "playwright test --grep @ForPROD"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vishnujadhav192/Playwright_orangehrm.git"
