@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import dotenv from "dotenv";
+import fs from "fs";
 
 dotenv.config();
 // Credentials live in .env (gitignored) — never hardcode them in a public repo.
@@ -32,5 +33,20 @@ async function saveSession() {
     console.log("Session saved to user-session.json ✅");
 
     await browser.close();
+
+    // Read the file
+    const data = fs.readFileSync("./user-session.json", "utf-8");
+
+    // Parse JSON
+    const session = JSON.parse(data);
+
+    // Display full content
+    console.log("Session storage content:", session);
+
+    // If you want to see cookies only
+    console.log("Cookies:", session.cookies);
+
+    // If you want to see localStorage/sessionStorage
+    console.log("Origins:", session.origins);
 }
 saveSession();
