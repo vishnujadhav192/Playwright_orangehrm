@@ -54,7 +54,7 @@ jobs:
 
       - name: 🎭 Install Playwright Browsers
         run: npx playwright install --with-deps
-		
+
       - name: ⚙️ Create .env File
         run: Copy-Item .env.example .env -ErrorAction SilentlyContinue
 
