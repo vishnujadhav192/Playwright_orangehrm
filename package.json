@@ -16,6 +16,15 @@
   "homepage": "https://github.com/vishnujadhav192/Playwright_orangehrm#readme",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.6.4"
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "playwright": "^1.63.0"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
